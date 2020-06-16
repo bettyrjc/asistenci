@@ -114,3 +114,17 @@ p {
 .grid-2 {
   grid-column: 2 / span 2;
 }
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}

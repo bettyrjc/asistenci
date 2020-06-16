@@ -114,6 +114,16 @@ p {
 .grid-2 {
   grid-column: 2 / span 2; }
 
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@keyframes fade {
+  from {
+    opacity: 0.3; }
+  to {
+    opacity: 1; } }
+
 .btn {
   cursor: pointer;
   font-family: "AvenirNext", "Open Sans", sans-serif;
@@ -127,6 +137,20 @@ p {
 
 .btn-outlined {
   cursor: pointer; }
+
+.test-slider-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .test-slider-box-circle {
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 5px 1rem;
+    background-color: #ffe7ea;
+    border-radius: 100%; }
+    .test-slider-box-circle.active {
+      background-color: #fb314a; }
 
 .header {
   border-bottom: solid 1px #e6ebf1;
@@ -370,12 +394,15 @@ p {
       @media (max-width: 64em) {
         .footer-red p {
           font-size: 13px; } }
+      @media (min-width: 6.25em) and (max-width: 37.5em) {
+        .footer-red p {
+          font-size: 10px; } }
     .footer-red img {
       width: 10rem;
       height: 7rem; }
       @media (min-width: 6.25em) and (max-width: 37.5em) {
         .footer-red img {
-          width: 5rem;
+          width: 4rem;
           height: 5rem; } }
     .footer-red-social-icon {
       fill: white;
@@ -383,7 +410,7 @@ p {
       width: 2rem; }
       @media (min-width: 6.25em) and (max-width: 37.5em) {
         .footer-red-social-icon {
-          width: 1.5rem;
+          width: 1rem;
           height: 1rem; } }
 
 .main {
@@ -469,7 +496,10 @@ p {
             margin-right: 0; } }
   .slider-box-img {
     width: 100%;
-    height: 20rem; }
+    height: 40rem; }
+    @media (min-width: 6.25em) and (max-width: 37.5em) {
+      .slider-box-img {
+        height: 20rem; } }
     .slider-box-img img {
       width: 100%;
       height: 100%;
@@ -547,55 +577,91 @@ p {
   justify-content: space-between;
   align-items: center;
   color: #200844; }
-  @media (min-width: 6.25em) and (max-width: 37.5em) {
-    .benefits-title {
-      flex-direction: column;
-      align-items: flex-start; } }
-  .benefits-title-box {
-    width: 17rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .benefits-title-box h2 {
-      font-family: "Poppins", "Open Sans", sans-serif;
-      font-size: 2rem;
-      color: #200844; }
-    .benefits-title-box button {
-      margin-top: 2px;
-      padding-top: 6px;
-      width: 2.5rem;
-      height: 2.5rem;
-      background-color: transparent;
-      border-radius: 50%;
-      border: none; }
-      .benefits-title-box button:hover {
-        background-color: #f4f4f4; }
-    .benefits-title-box-icons {
-      height: 2.5rem; }
-      .benefits-title-box-icons-icon {
-        fill: #43484d;
-        width: 1.6rem;
-        height: 1.6rem; }
+  .benefits-title-box h2 {
+    font-family: "Poppins", "Open Sans", sans-serif;
+    font-size: 2rem;
+    color: #200844; }
+    @media (min-width: 6.25em) and (max-width: 37.5em) {
+      .benefits-title-box h2 {
+        font-size: 1.5rem; } }
+  .benefits-title-box button {
+    margin-top: 2px;
+    padding-top: 6px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none; }
+    .benefits-title-box button:hover {
+      background-color: #f4f4f4; }
+  .benefits-title-box-icons {
+    height: 2.5rem; }
+    .benefits-title-box-icons-icon {
+      fill: #43484d;
+      width: 1.6rem;
+      height: 1.6rem; }
   .benefits-title-btn {
     color: #fb314a;
     background-color: transparent;
     border: 1.5px solid #fb314a; }
     @media (min-width: 6.25em) and (max-width: 37.5em) {
       .benefits-title-btn {
-        margin-top: 1rem; } }
+        margin-top: 1rem;
+        font-size: 10px;
+        padding: 10px; } }
     .benefits-title-btn:hover {
       background-color: #fb314a;
       color: white;
       width: 190px; }
 
+.benefits-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .benefits-main-btn {
+    margin-top: 2px;
+    padding-top: 6px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none; }
+    @media (min-width: 6.25em) and (max-width: 37.5em) {
+      .benefits-main-btn {
+        opacity: 0;
+        display: none; } }
+    .benefits-main-btn:hover {
+      background-color: #f4f4f4; }
+  .benefits-main-icons {
+    height: 2.5rem; }
+    .benefits-main-icons-icon {
+      fill: #43484d;
+      width: 1.6rem;
+      height: 1.6rem; }
+
+.benefits-container {
+  margin: 0 5%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95%; }
+
 .benefits-grill {
+  vertical-align: top;
+  transition: 2s;
   margin: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; }
+  @media (max-width: 64em) {
+    .benefits-grill {
+      grid-template-columns: repeat(3, 1fr); } }
   @media (min-width: 6.25em) and (max-width: 37.5em) {
     .benefits-grill {
       grid-template-columns: repeat(1, 1fr); } }
   .benefits-grill-box {
+    transition: 2s;
     padding: 1rem 1rem 2.5rem;
     border-radius: 10px;
     border: solid 1px #e6ebf1; }
@@ -611,7 +677,8 @@ p {
       font-family: "Poppins", "Open Sans", sans-serif;
       font-size: 1.5rem;
       color: #200844;
-      margin: 8px 0; }
+      margin: 8px 0;
+      transition: 0.3s; }
     .benefits-grill-box-description {
       font-weight: lighter;
       color: #43484d; }
@@ -785,7 +852,8 @@ p {
         margin: 0 5px; } }
 
 .testimonies {
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  height: auto; }
   @media (min-width: 6.25em) and (max-width: 37.5em) {
     .testimonies {
       margin-left: 5px;
@@ -800,16 +868,26 @@ p {
     @media (min-width: 6.25em) and (max-width: 37.5em) {
       .testimonies-title {
         font-size: 1.5rem; } }
+  .testimonies-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95%;
+    width: 100%; }
   .testimonies-grill {
+    vertical-align: top;
+    transition: 2s;
     margin: 2rem 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); }
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; }
     @media (max-width: 64em) {
       .testimonies-grill {
         grid-template-columns: repeat(3, 1fr); } }
     @media (min-width: 6.25em) and (max-width: 37.5em) {
       .testimonies-grill {
-        display: block; } }
+        grid-template-columns: repeat(1, 1fr); } }
     .testimonies-grill-box {
       padding: 1rem 2.5rem 2.5rem;
       border-radius: 10px;

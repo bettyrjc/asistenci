@@ -85,8 +85,10 @@
     }
     &-img {
       width: 100%;
-      height: 20rem;
-
+      height: 40rem;
+      @include respond(phone) {
+        height: 20rem;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -179,20 +181,16 @@
   &-title {
     @include flex;
     color: $color-purple;
-    @include respond(phone) {
-      flex-direction: column;
-
-      align-items: flex-start;
-    }
 
     &-box {
-      width: 17rem;
-      @include flex;
-
       h2 {
         font-family: $font-title;
         font-size: 2rem;
         color: $color-purple;
+
+        @include respond(phone) {
+          font-size: 1.5rem;
+        }
       }
       button {
         margin-top: 2px;
@@ -223,6 +221,8 @@
       border: 1.5px solid $color-pink;
       @include respond(phone) {
         margin-top: 1rem;
+        font-size: 10px;
+        padding: 10px;
       }
       &:hover {
         background-color: $color-pink;
@@ -231,15 +231,59 @@
       }
     }
   }
+  &-main {
+    @include flex;
+
+    &-btn {
+      margin-top: 2px;
+      padding-top: 6px;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: transparent;
+      border-radius: 50%;
+      border: none;
+      @include respond(phone) {
+        opacity: 0;
+        display: none;
+      }
+
+      &:hover {
+        background-color: $color-light-gray;
+      }
+    }
+    &-icons {
+      height: 2.5rem;
+
+      &-icon {
+        fill: $color-dark-gray;
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
   // /grilla de beneficios
+  &-container {
+    margin: 0 5%;
+    overflow: hidden;
+    @include flex;
+    height: 95%;
+  }
   &-grill {
+    vertical-align: top;
+    transition: 2s;
     margin: 2rem 0;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @include respond(tab) {
+      grid-template-columns: repeat(3, 1fr);
+    }
     @include respond(phone) {
       grid-template-columns: repeat(1, 1fr);
     }
     &-box {
+      transition: 2s;
       padding: 1rem 1rem 2.5rem;
       border-radius: 10px;
       border: $border-gray;
@@ -258,6 +302,7 @@
         font-size: 1.5rem;
         color: $color-purple;
         margin: 8px 0;
+        transition: 0.3s;
       }
       &-description {
         font-weight: lighter;
@@ -467,6 +512,7 @@
 
 .testimonies {
   margin-left: 1rem;
+  height: auto;
   @include respond(phone) {
     margin-left: 5px;
     margin-right: 5px;
@@ -482,15 +528,24 @@
       font-size: 1.5rem;
     }
   }
+  &-container {
+    overflow: hidden;
+    @include flex;
+    height: 95%;
+    width: 100%;
+  }
   &-grill {
+    vertical-align: top;
+    transition: 2s;
     margin: 2rem 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
     @include respond(tab) {
       grid-template-columns: repeat(3, 1fr);
     }
     @include respond(phone) {
-      display: block;
+      grid-template-columns: repeat(1, 1fr);
     }
     &-box {
       padding: 1rem 2.5rem 2.5rem;
