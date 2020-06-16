@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-height: 6.5rem;
+  &-logo {
+    margin: 0.5rem;
+    width: auto;
+    height: 4rem;
+  }
+  &-links {
+    display: flex;
+    &-link {
+      margin-left: 1.5rem;
+      font-size: 12px;
+      a {
+        font-weight: bold;
+      }
+    }
+  }
+  &-buttons {
+    margin-left: 1rem;
+    &-btn {
+      margin-left: 1rem;
+    }
+  }
+}

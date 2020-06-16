@@ -1,0 +1,78 @@
+//////////////////////
+* {
+  margin: 0;
+  font-family: $font-li;
+}
+a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+li {
+  list-style-type: none;
+  font-family: $font-li;
+}
+i {
+  font-style: normal;
+}
+.c-pink {
+  color: $color-pink;
+}
+.c-purple {
+  color: $color-purple;
+}
+// background
+.b-lightPink {
+  background-color: $color-light-pink;
+  &:hover {
+    background-color: $color-pink;
+    color: $color-white;
+    box-shadow: $shadow-button;
+  }
+}
+.b-lightPurple {
+  background-color: $color-light-purple;
+  &:hover {
+    color: $color-white;
+    background-color: $color-purple;
+    box-shadow: $shadow-button;
+  }
+}
+// background btn colores fuertes
+.b-pink {
+  background-color: $color-pink;
+  background: rgb(251, 49, 74);
+
+  color: $color-white;
+  transition: width 0.5s ease-in-out;
+  &:hover {
+    box-shadow: $shadow-button;
+    width: 16rem;
+  }
+}
+.b-purple {
+  background-color: $color-purple;
+
+  color: $color-white;
+  transition: all 0.9s linear;
+  &:hover {
+    box-shadow: $shadow-button;
+
+    width: 16rem;
+  }
+}
+// fuentes
+.bold {
+  font-weight: bold;
+}
+.m-t {
+  margin-top: 1rem;
+}
+
+// extras
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}

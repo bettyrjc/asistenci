@@ -1,0 +1,213 @@
+.main {
+}
+.slider {
+  &-covid {
+    background-color: $color-purple;
+    color: $color-white;
+    height: 4rem;
+    @include flex-center;
+  }
+  b {
+    padding: 0 5px;
+  }
+
+  &-box {
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    height: 40rem;
+    &-description {
+      @include flex-center;
+      align-items: flex-start;
+      flex-direction: column;
+      margin: 0 10%;
+      &-slogan {
+        font-size: 1.4rem;
+      }
+      &-title {
+        font-size: 3.5rem;
+        color: $color-purple;
+        font-family: $font-title;
+      }
+      &-text {
+        font-weight: lighter;
+        line-height: 2rem;
+      }
+      &-btns {
+        margin-top: 1.2rem;
+        &-btn {
+          padding: 1.3rem 2.5rem;
+          margin-right: 1.2rem;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    &-img {
+      width: 100%;
+      height: 40rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // object-position: ;
+      }
+    }
+  }
+}
+// ///////////////////////////////////////
+
+.container {
+  margin: 0 6%;
+}
+// que es
+.whatIs {
+  margin: 5% 0;
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  &-img {
+    position: relative;
+    width: 30rem;
+    height: 20rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &-icon {
+      cursor: pointer;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -50px;
+      width: 6rem;
+      height: 6rem;
+      fill: red;
+    }
+  }
+  &-description {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    h2 {
+      color: $color-purple;
+      margin-bottom: 1.3rem;
+      font-family: $font-title;
+      font-size: 2.2rem;
+    }
+    p {
+      line-height: 1.8rem;
+      font-weight: lighter;
+      color: $color-dark-gray;
+    }
+  }
+}
+
+//beneficios
+.benefits {
+  &-title {
+    @include flex;
+    color: $color-purple;
+
+    &-box {
+      width: 17rem;
+      @include flex;
+
+      h2 {
+        font-family: $font-title;
+        font-size: 2rem;
+        color: $color-purple;
+      }
+      button {
+        margin-top: 2px;
+        padding-top: 6px;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+
+        &:hover {
+          background-color: $color-light-gray;
+        }
+      }
+      &-icons {
+        height: 2.5rem;
+
+        &-icon {
+          fill: $color-dark-gray;
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
+    &-btn {
+      color: $color-pink;
+      background-color: transparent;
+      border: 1.5px solid $color-pink;
+
+      &:hover {
+        background-color: $color-pink;
+        color: $color-white;
+        width: 190px;
+      }
+    }
+  }
+
+  &-grill {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    &-box {
+      padding: 1rem 1rem 2.5rem;
+      border-radius: 10px;
+      border: $border-gray;
+      &-img {
+        position: relative;
+        width: 100%;
+        height: 13rem;
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: 13rem;
+        }
+      }
+      &-title {
+        font-family: $font-title;
+        font-size: 1.5rem;
+        color: $color-purple;
+        margin: 8px 0;
+      }
+      &-description {
+        font-weight: lighter;
+        color: $color-dark-gray;
+      }
+
+      .hover {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+
+        @include flex-center;
+        &:hover {
+          opacity: 1;
+        }
+        &-btn {
+          letter-spacing: 1px;
+          background-color: transparent;
+          border: 1.5px solid $color-white;
+          color: $color-white;
+        }
+      }
+
+      &:hover {
+        box-shadow: $shadow-card-product-hover;
+      }
+    }
+  }
+}
