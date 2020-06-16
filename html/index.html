@@ -11,6 +11,11 @@
   </head>
   <body>
     <header class="header">
+      <div class="header-menuicon">
+        <svg class="header-menuicon-icon" id="menu">
+          <use href="../img/icons/sprite.svg#icon-menu" />
+        </svg>
+      </div>
       <a href="./index.html">
         <img class="header-logo" src="../img/Asistensi_logotipo.svg" />
       </a>
@@ -48,18 +53,66 @@
         </button>
       </div>
     </header>
+    <!-- RESPONSIVE -->
+    <div class="nav-bar">
+      <div class="side">
+        <a href="./index.html" class="side-logo">
+          <img class="side-logo-img" src="../img/Asistensi_logotipo.svg" />
+        </a>
+        <hr />
+        <ul class="side-links">
+          <li class="side-links-item">
+            <a href="#" class="c-pink side-links-link">Inicio</a>
+          </li>
+          <li class="side-links-item">
+            <a href="#" class="side-links-link">Planes</a>
+          </li>
+          <li class="side-links-item">
+            <a class="side-links-link"  href="#">Beneficios</a class="side-links-link" >
+          </li>
+          <li class="side-links-item">
+            <a class="side-links-link"  href="#">¿Quienes somos?</a>
+          </li>
+          <li class="side-links-item">
+            <a class="side-links-link"  href="#">FAQ's</a>
+          </li>
+          <li class="side-links-item">
+            <a  class="side-links-link" href="#">Contacto</a>
+          </li>
+          <li class="side-links-item">
+            <a  class="side-links-link" href="#">SOS</a>
+          </li>
+        </ul>
+        <!--  -->
+        <div class="side-buttons">
+          <button class="btn side-buttons-btn c-purple b-lightPurple">
+            Iniciar Sesion
+          </button>
+          <button class="btn side-buttons-btn c-pink b-lightPink m-l">
+            Afiliarse
+          </button>
+        </div>
+      </div>
+      <div class='side-icons'id="close" >
+        <svg class="side-icon" >
+          <use href="../img/icons/sprite.svg#icon-x" />
+        </svg>
+      </div>
+    </div>
     <!-- fin header -->
     <main class="main">
       <section class="slider">
-        <p class="slider-covid">
-          Mientras dure la pandemia del COVID-19 ponemos a disposición
-          totalmente gratis
-          <b class="c-pink"> asistensi SOS</b> para consultas médicas por
-          cualquier motivo.
-          <b class="c-pink b">
-            Haz clic aquí y accede.
-          </b>
-        </p>
+        <div class="slider-covid">
+          <p>
+            Mientras dure la pandemia del COVID-19 ponemos a disposición
+            totalmente gratis
+            <b class="c-pink"> asistensi SOS</b> para consultas médicas por
+            cualquier motivo.
+            <b class="c-pink b">
+              Haz clic aquí y accede.
+            </b>
+          </p>
+        </div>
         <div class="slider-box">
           <div class="slider-box-description">
             <p class="slider-box-description-slogan bold c-pink">
@@ -124,7 +177,7 @@
           </div>
         </section>
         <!-- beneficios -->
-        <div class="benefits">
+        <section class="benefits">
           <div class="benefits-title">
             <div class="benefits-title-box">
               <h2>Beneficios</h2>
@@ -169,10 +222,250 @@
             </div>
           </div>
           <!--¿Cómo contratar asistensi?  -->
-          <div class="afiliacion"></div>
+        </section>
+      </div>
+
+      <section class="membership">
+        <div class="membership-title absolute">
+          <p class="slider-box-description-slogan bold c-pink">
+            Cuídalos sin importar las distancias
+          </p>
+          <h1>¿C&oacute;mo contratar asistensi?</h1>
+        </div>
+        <div class="membership-container">
+          <div class="membership-container-box grid-1">
+            <div class="membership-container-box-circle">
+              <h1>1</h1>
+            </div>
+            <div class="membership-container-box-description">
+              <h3 class="c-pink">Paso 1:</h3>
+              <h1>¡Afiliaci&oacute;n inmediata!</h1>
+              <p>
+                Es el &uacute;nico seguro para emergencias médicas y atención
+                médica inmediata que puedes contratar y pagar 100% online de
+                forma segura e inmediata.
+              </p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="membership-container-box grid-2 f-right">
+            <div class="membership-container-box-circle">
+              <h1>2</h1>
+            </div>
+            <div class="membership-container-box-description">
+              <h3 class="c-pink">Paso 2:</h3>
+              <h1>¡Tus familiares est&aacute;n protegidos!</h1>
+              <p>
+                Ante una emergencia médica tus familiares podrán acceder a todos
+                nuestros servicios solicitándolos a través de nuestra App
+                <b class="c-pink">asistensi</b> o llamando a nuestros números de
+                emergencia.
+              </p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="membership-container-box grid-3">
+            <div class="membership-container-box-circle">
+              <h1>3</h1>
+            </div>
+            <div class="membership-container-box-description">
+              <h3 class="c-pink">Paso 3:</h3>
+              <h1>¡T&uacute; también estás protegido!</h1>
+              <p>
+                Descarga nuestra App <b class="c-pink">asistensi</b> y consulta
+                a nuestros médicos de forma gratuita e ilimitada desde cualquier
+                parte del mundo. Podrás recibir indicaciones y recetas médicas
+                para cuidar tu salud, sin importar dónde estés.
+              </p>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+      </section>
+      <!-- numeros banner porcentajes-->
+      <section class="numbers">
+        <div class="banner">
+          <img src="../img/beneficios.png" alt="banner de beneficios" />
+        </div>
+        <div class="numbers-title">
+          <p class="slider-box-description-slogan bold c-pink">
+            Cuídalos sin importar las distancias
+          </p>
+          <h1>¡Los n&uacute;meros nos respaldan!</h1>
+        </div>
+        <div class="numbers-grill">
+          <div class="numbers-grill-box pink">
+            <svg class="numbers-grill-box-icon">
+              <use href="../img/icons/sprite.svg#icon-users" />
+            </svg>
+            <h1>98%</h1>
+            <p>
+              de los usuarios de <b class="c-purple">asistensi</b> están
+              satisfechos con el servicio
+            </p>
+          </div>
+          <!--  -->
+          <div class="numbers-grill-box purple">
+            <svg class="numbers-grill-box-icon">
+              <use href="../img/icons/sprite.svg#icon-watch" />
+            </svg>
+            <h1>98%</h1>
+            <p>
+              de los casos son atendidos con un tiempo de respuesta menor a los
+              45 minutos.
+            </p>
+          </div>
+          <!--  -->
+          <div class="numbers-grill-box pink">
+            <svg class="numbers-grill-box-icon">
+              <use href="../img/icons/sprite.svg#icon-price-tags" />
+            </svg>
+            <h1>95%</h1>
+            <p>
+              de los usuarios que han probado nuestro servicio nos recomiendan.
+            </p>
+          </div>
+        </div>
+
+        <div class="brands">
+          <img
+            src="https://asistensi.com/static/images/bitmap.png"
+            alt="bitmap"
+          />
+          <img
+            src="https://asistensi.com/static/images/iso-logo.svg"
+            alt="iso"
+          />
+          <img
+            src="https://asistensi.com/static/images/ata-logo-transp.png"
+            alt="ata"
+          />
+          <img
+            src="https://asistensi.com/static/images/digi-cert-blue-transparent-logo.png"
+            alt="digicert"
+          />
+          <img
+            class="w-185"
+            src="https://asistensi.com/static/images/seguros-mercantil.svg"
+            alt="mercantil"
+          />
+        </div>
+      </section>
+      <!--  -->
+
+      <section class="testimonies">
+        <h2 class="testimonies-title">
+          Lo que dicen familiares y usuarios, como <br />tú, sobre
+          <b class="c-pink">asistensi</b>
+        </h2>
+        <!--  -->
+        <div class="testimonies-grill">
+          <div class="testimonies-grill-box">
+            <h3 class="testimonies-grill-box-title c-pink">
+              Nelida Daal
+            </h3>
+            <h3 class="testimonies-grill-box-title c-gray">
+              Abuela en Venezuela
+            </h3>
+            <p class="testimonies-grill-box-description">
+              " La primera vez que vinieron fue excelente, la doctora y el
+              paramédico que la acompañó fueron excelentes. Me trajeron la
+              medicina a tiempo. Todo muy bien. "
+            </p>
+          </div>
+        </div>
+        <div class="circles"></div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-container-contacts">
+          <div class="footer-container-contacts-texts">
+            <p class="footer-container-contacts-text">
+              Estados Unidos: <i class="c-pink">+1 (305) 455.88.11</i>
+            </p>
+            <p class="footer-container-contacts-text">
+              Venezuela:
+              <i class="c-pink">+58 (800) 836.36.37 /+58 (212) 822.12.60</i>
+            </p>
+            <p class="footer-container-contacts-text">
+              España: <i class="c-pink">+34 (911) 238.276</i>
+            </p>
+          </div>
+          <div class="footer-container-contacts-btns">
+            <button class="btn footer-container-contacts-btns-btn">
+              App Store
+            </button>
+            <button class="btn footer-container-contacts-btns-btn">
+              Google play
+            </button>
+          </div>
+        </div>
+        <div class="footer-container-list">
+          <h3 class="c-pink">
+            Mapa de sitio
+          </h3>
+          <ul>
+            <a href="">
+              <li>¿Quienes somos?</li>
+            </a>
+            <a href="">
+              <li>Planes</li>
+            </a>
+            <a href="">
+              <li>Beneficios</li>
+            </a>
+            <a href="">
+              <li>Cotizar un plan</li>
+            </a>
+            <a href="">
+              <li>Contacto</li>
+            </a>
+          </ul>
+        </div>
+        <div class="footer-container-list">
+          <h3 class="c-pink">
+            Información
+          </h3>
+          <ul>
+            <a href="">
+              <li>Preguntas Frecuentes</li>
+            </a>
+            <a href="">
+              <li>Términos de uso</li>
+            </a>
+            <a href="">
+              <li>Políticas de privacidad</li>
+            </a>
+            <a href="">
+              <li>Políticas de cookies</li>
+            </a>
+            <a href="">
+              <li>Aviso legal</li>
+            </a>
+          </ul>
         </div>
       </div>
-      <!--  -->
-    </main>
+      <div class="footer-red">
+        <p>©2020 Asistensi Global</p>
+        <img src="https://asistensi.com/static/images/logo.svg" alt="logo" />
+        <div class="footer-red-social">
+          <svg class="footer-red-social-icon">
+            <use href="../img/icons/sprite.svg#icon-facebook2" />
+          </svg>
+          <svg class="footer-red-social-icon">
+            <use href="../img/icons/sprite.svg#icon-linkedin" />
+          </svg>
+          <svg class="footer-red-social-icon">
+            <use href="../img/icons/sprite.svg#icon-twitter1" />
+          </svg>
+          <svg class="footer-red-social-icon">
+            <use href="../img/icons/sprite.svg#icon-instagram1" />
+          </svg>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/index.js"></script>
   </body>
 </html>
